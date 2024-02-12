@@ -33,6 +33,7 @@ body {
 		background-image: url(images/header-logo.png);
 		background-position: center;
 		background-repeat: no-repeat;
+		background-size: contain;
 	}
 	a {
 		text-decoration: none;
@@ -43,13 +44,17 @@ body {
 .main {
 	margin-bottom: -60px;
 	.video-section {
-		max-height: 900px;
+		height: 900px;
 		overflow: hidden;
 		position: relative;
 		.video-bg {
+			position: absolute;
+			top: 0px;
+			left: 0px;
 			opacity: 0.5;
 			width: 100%;
-			height: 60%;
+			height: 100%;
+			object-fit: cover;
 		}
 		.main-content {
 			position: absolute;
@@ -63,6 +68,7 @@ body {
 				background-image: url(images/logo-main.png);
 				background-position: center;
 				background-repeat: no-repeat;
+				background-size: contain;
 			}
 			.main-title {
 				font-size: 24px;
@@ -90,8 +96,9 @@ body {
 	padding-top: 47px;
 	padding-bottom: 34px;
 	background-image: url(images/footer-bg.png);
-	background-position: 100% 100%;
+	background-position: 110% 300%;
 	background-repeat: no-repeat;
+	background-size: 464px;
 	border-top-left-radius: 60px;
 	border-top-right-radius: 60px;
 	a {
@@ -105,6 +112,9 @@ body {
 			width: 33%;
 			.footer-logo {
 				background-image: url(images/footer-logo.png);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
 				height: 87px;
 				width: 311px;
 			}
@@ -143,7 +153,7 @@ body {
 			margin-bottom: 16px;
 		}
 		.footer-row-navigation {
-			min-width: 200px;
+			min-width: 160px;
 		}
 		.footer-row-contacts {
 			.footer-row-addresses {
@@ -200,6 +210,149 @@ body {
 		line-height: 24px;
 		> span {
 			font-weight: 700;
+		}
+	}
+}
+
+// Adaptive
+
+// ------------- laptop -------------
+@media (max-width: 1200px) {
+	.header {
+		.header-row {
+			height: 70px;
+		}
+		.logo {
+			width: 250px;
+		}
+	}
+
+	.main {
+		.video-section {
+			height: 600px;
+		}
+	}
+
+	.footer {
+		background-position: 110% 120%;
+		.footer-row {
+			flex-wrap: wrap;
+			.footer-row-logo-wrapper {
+				width: 60%;
+			}
+		}
+	}
+}
+
+// ------------- Tablet -------------
+@media (max-width: 992px) {
+	.header {
+		.header-row {
+			a {
+				display: none;
+			}
+		}
+		.logo {
+			position: static;
+		}
+	}
+
+	.main {
+		.video-section {
+			.main-content {
+				.main-logo {
+					width: 500px;
+					height: 160px;
+				}
+				.main-subtitle-wrapper {
+					width: 75%;
+				}
+			}
+		}
+	}
+
+	.footer {
+		.footer-row {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			gap: 26px 50px;
+			.footer-row-logo-wrapper {
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
+			.footer-row-contacts {
+				.footer-row-addresses {
+					flex-direction: column;
+					gap: 26px;
+				}
+			}
+			.footer-row-logo-wrapper {
+				width: 100%;
+				.footer-logo-wrapper-title {
+					font-size: 32px;
+					line-height: 44px;
+				}
+			}
+		}
+	}
+}
+
+// ------------- Mobile -------------
+@media (max-width: 576px) {
+	.container {
+		padding: 0px 26px;
+	}
+
+	.header {
+		height: 50px;
+		.header-row {
+			height: 50px;
+		}
+		.logo {
+			width: 180px;
+			min-width: 180px;
+		}
+	}
+
+	.main {
+		.video-section {
+			height: 400px;
+			.video-bg {
+				height: 100%;
+				width: auto;
+				left: -150px;
+			}
+			.main-content {
+				.main-logo {
+					width: 300px;
+					height: 80px;
+				}
+				.main-subtitle-wrapper {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.footer {
+		background-position: right -185px bottom 65%;
+		.footer-row {
+			grid-template-columns: 1fr;
+			.footer-row-logo-wrapper {
+				grid-column-start: 1;
+				grid-column-end: 2;
+				.footer-logo {
+					width: 280px;
+					height: 78px;
+				}
+				.footer-logo-wrapper-title {
+					font-size: 28px;
+					line-height: 40px;
+				}
+			}
+		}
+		.footer-copyright {
+			margin-top: 55px;
 		}
 	}
 }
