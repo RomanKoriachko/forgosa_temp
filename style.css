@@ -1,0 +1,328 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #070707;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1920px;
+  padding: 0px 75px;
+  margin: 0 auto;
+}
+
+.header .header-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 103px;
+}
+.header .logo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 360px;
+  height: 100%;
+  background-image: url(images/header-logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.header a {
+  text-decoration: none;
+  color: white;
+}
+
+.main {
+  margin-bottom: -60px;
+}
+.main .video-section {
+  max-height: 900px;
+  overflow: hidden;
+  position: relative;
+}
+.main .video-section .video-bg {
+  opacity: 0.5;
+  width: 100%;
+  height: 60%;
+}
+.main .video-section .main-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.main .video-section .main-content .main-logo {
+  width: 800px;
+  height: 225px;
+  background-image: url(images/logo-main.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main .video-section .main-content .main-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-bottom: 7px;
+}
+.main .video-section .main-content .main-subtitle-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+.main .video-section .main-content .main-subtitle {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.footer {
+  background-color: #22241a;
+  position: relative;
+  padding-top: 47px;
+  padding-bottom: 34px;
+  background-image: url(images/footer-bg.png);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.footer .footer-row {
+  display: flex;
+  gap: 70px;
+}
+.footer .footer-row .footer-row-logo-wrapper {
+  width: 33%;
+}
+.footer .footer-row .footer-row-logo-wrapper .footer-logo {
+  background-image: url(images/footer-logo.png);
+  height: 87px;
+  width: 311px;
+}
+.footer .footer-row .footer-row-logo-wrapper .footer-logo-wrapper-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #fe6700;
+  margin-top: 11px;
+  margin-bottom: 7px;
+}
+.footer .footer-row .footer-row-logo-wrapper .footer-logo-wrapper-title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+}
+.footer .footer-row .footer-row-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  margin-bottom: 16px;
+}
+.footer .footer-row .footer-row-subtitle {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.footer .footer-row .footer-row-item {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+.footer .footer-row .footer-row-navigation {
+  min-width: 200px;
+}
+.footer .footer-row .footer-row-contacts .footer-row-addresses {
+  display: flex;
+  margin-top: 24px;
+}
+.footer .footer-row .footer-row-contacts .footer-row-addresses .footer-row-address {
+  display: flex;
+  align-items: start;
+  gap: 16px;
+  max-width: 225px;
+}
+.footer .footer-row .footer-row-contacts .footer-row-addresses .footer-row-address .footer-row-address-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 12px;
+  min-height: 12px;
+}
+.footer .footer-row .footer-row-contacts .footer-row-addresses .footer-row-address .footer-row-address-item {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.footer .footer-row .footer-row-contacts .footer-row-addresses .footer-row-address .footer-row-address-item-bold {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.footer .footer-row .footer-row-contacts .footer-row-addresses .footer-row-address-1 .footer-row-address-img {
+  background-image: url(images/uae-img.svg);
+}
+.footer .footer-row .footer-row-contacts .footer-row-addresses .footer-row-address-2 .footer-row-address-img {
+  background-image: url(images/oman-img.svg);
+}
+.footer .footer-row .footer-row-contacts .footer-row-addresses .footer-row-address-3 .footer-row-address-img {
+  background-image: url(images/mexico-img.svg);
+}
+.footer .footer-copyright {
+  text-align: center;
+  margin-top: 140px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.footer .footer-copyright > span {
+  font-weight: 700;
+}
